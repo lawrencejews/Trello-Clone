@@ -1,14 +1,14 @@
-import { AppContainer, CardContainer, ColumnContainer, ColumnTitle } from "./styles";
+import { AppContainer } from "./styledTypes/styles";
+import { Columns } from "./components/Columns"
+import { AddNewItem } from "./components/AddNewItem";
 
 export function App() {
   return (
     <AppContainer>
-      <ColumnContainer>
-        <ColumnTitle>Todo:</ColumnTitle>
-        <CardContainer>First Item</CardContainer>
-        <CardContainer>Second Item</CardContainer>
-        <CardContainer>Third Item</CardContainer>
-      </ColumnContainer>
+      <Columns text="Todo:" />
+      <AddNewItem toggleButtonText="+ Add another list"
+        onAdd={() => console.log("Item Created")}
+      />
     </AppContainer>
-    )  
+  )
 }
